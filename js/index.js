@@ -44,7 +44,11 @@ const callFetch= async(c,max) =>{
     let arrayaux=[]
     for (c; c <= max; c++) {
         const llamado = fetchPokemon(API_URLS+c.toString()+'/')
-        llamado.then((data)=> arrayaux.push(data))
+        llamado.then((data)=> {
+            let pokecard = pokecardGenerator(data)
+            elemento2.appendChild(pokecard)         
+            arrayaux.push(data)
+        })
     }
     return arrayaux
 }
@@ -57,9 +61,7 @@ function fillList(c){
             arrayaux.sort((a,b)=>{
                 return a.id - b.id 
             })
-            console.log(arrayaux)
-        }
-        )
+        })
 
     }
     else{
