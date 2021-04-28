@@ -30,10 +30,7 @@ const fetchPokemon = async (url_api) =>{
         const pokemon = new Pokemon(name,id,type1,type2,sprite_front,sprite_back,ar)
         pokemon_list.push(pokemon)
         return pokemon
-        /*
-        let pokecard = pokecardGenerator(pokemon)
-        elemento2.appendChild(pokecard)
-        */
+
     }
     catch(error){
         console.error(error);
@@ -53,6 +50,14 @@ const callFetch= async(c,max) =>{
     return arrayaux
 }
 
+function fillList(c){
+    const llamado = callFetch(c,maxPokedex)
+    llamado.then((arrayaux)=>{
+        arrayaux.sort((a,b)=>{
+            return a.id - b.id 
+        })
+    })}
+/*
 function fillList(c){
     let max = c+20
     if(max<maxPokedex){
@@ -79,6 +84,7 @@ function fillList(c){
     counter=max+1
     console.log(counter)
 }
+*/
 
 fillList(counter)
 
@@ -99,10 +105,11 @@ switch(event.type) {
     break;
 }
 } 
+/*
 window.addEventListener('scroll',()=>{
 	const {scrollHeight,scrollTop,clientHeight} = document.documentElement;
 	if(scrollTop + clientHeight > scrollHeight - 5){
 		setTimeout(fillList(counter),2000);
 
 	}
-});
+});*/
