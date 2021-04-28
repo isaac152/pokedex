@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/pokecard_style.css">
+</head>
+<body>
+    <main id="main">
+        <div id="top" class="top">
+ 
+            <svg >
+
+                <circle cx="0" cy="0" r="110" stroke="black" stroke-width="6" fill="transparent" />
+                <circle cx="0" cy="0" r="80" stroke="black" stroke-width="6" fill="transparent" />
+                <circle cx="100%" cy="0" r="110" stroke="black" stroke-width="6" fill="transparent" />
+                <circle cx="100%" cy="0" r="80" stroke="black" stroke-width="6" fill="transparent" />
+            </svg> 
+        </div>
+        <div class="main_content" id="main_container">
+            <div id="Pokeball" class="Pokeball"onclick="show()">
+                <div class="line ">
+                    <div class="ball"></div>
+                </div>
+                
+            </div>
+            <div class="Start" id="Start">
+                <div class="pokemon_cards" id="content"> 
+                </div>
+            </div>
+        </div>
+        <div class="bot"> 
+
+            <svg >
+                <circle cx="100%" cy="100%" r="110" stroke="black" stroke-width="6" fill="transparent" />
+                <circle cx="100%" cy="100%" r="80" stroke="black" stroke-width="6" fill="transparent" />
+                <circle cx="0" cy="100%" r="110" stroke="black" stroke-width="6" fill="transparent" />
+                <circle cx="0" cy="100%" r="80" stroke="black" stroke-width="6" fill="transparent"/>
+            </svg> 
+
+        </div>
+    </main>
+    <script src="./js/pokemon.js"></script>
+    <script src="./js/DataFetch.js"></script>
+    <script src="./js/pokecard.js"></script>
+
+    <script src="./js/index.js"></script>
+
+</body>
+</html>

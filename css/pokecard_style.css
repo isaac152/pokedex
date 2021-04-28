@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: "Flexo-Medium",arial,sans-serif;
+}
+.tarjeta_pokemon{
+    background-color: #fff1d0;
+    margin: 10px;
+    max-width: 325px;
+    min-width: 325px;
+    border-radius: 10px;
+    box-shadow: 13px 21px 29px -10px rgba(0,0,0,0.5);
+    padding: 5px;
+}
+.pokemon{
+    display:grid;
+    grid-gap:10px;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+        "sprite avatar"
+        " num   avatar";
+}
+.pokemon .Sprite{
+    grid-column: 1/2;
+    grid-row: 1;
+    max-width: max-content;
+    max-height: max-content;
+    width: max-content;
+    justify-self: center;
+    align-self: center;
+    margin-left: 20px;
+}
+.pokemon .Avatar{
+    grid-column: 2/3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    max-width: 250px;
+    min-width: 200px;
+    grid-area: avatar;
+    justify-self: center;
+    align-self: center;
+}
+.pokemon .num{
+    grid-column: 1/2;
+    grid-row: 2;
+    font-size: 400%;
+    opacity: 0.7;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    justify-self:center;
+    align-self: center;
+    grid-area: num;
+}
+
+.Info{
+    display:flex;
+    grid-gap:20px;
+    margin: 20px;
+    flex-direction: column;
+}  
+h4{
+    font-size: 140%;
+}
+.name{
+    font-size: 250%;
+    text-align: center;
+}
+.tipo-container{
+    display:flex;
+    justify-content: space-around;
+}
+.tipo{
+    border: black solid 2px ;
+    border-radius: 4px 4px 4px 4px;
+    background-color: grey;
+    padding: 4px 6px;
+}
+
+.generation-container{
+    display:flex;
+    justify-content: space-evenly;
+}
